@@ -16,7 +16,7 @@ $(function(){
 
   //Helper function to add ellipses if a string is too long.
   function checkLength(string) {
-    var MAX_LENGTH = 50;
+    var MAX_LENGTH = 40;
     if (string.length > MAX_LENGTH) {
       return string.substring(0, MAX_LENGTH-3)+"...";
     }
@@ -44,16 +44,16 @@ $(function(){
             "<div class = 'art-view' id = '" + loadedJSONFile[key].accession_number + "'>",
               "<img class = 'art-image' src = 'img/" +  loadedJSONFile[key].accession_number + "_reduced.jpg' alt = '" + loadedJSONFile[key].title + "' >",
               "<div class = 'art-description'>",
-                " <p><mark>TITLE : " + checkLength(loadedJSONFile[key].title) + " </mark></p>",
-                " <p><mark>CREATOR : " + checkLength(loadedJSONFile[key].description) + " </mark></p>",
+                " <p>TITLE : " + checkLength(loadedJSONFile[key].title) + " </p>",
+                " <p>CREATOR : " + checkLength(loadedJSONFile[key].description) + "</p>",
               "</div>",
               "<div class = 'art-description-full'>",
-                " <p><mark>TITLE : " + loadedJSONFile[key].title + " </mark></p>",
-                " <p><mark>CREATOR : " + loadedJSONFile[key].description + " </mark></p>",
-                " <p><mark>ACCEESSION NUMBER : " + loadedJSONFile[key].accession_number + " </mark></p>",
-                " <p><mark>TOMBSTONE : " + loadedJSONFile[key].tombstone + " </mark></p>",
-                " <p><mark>DEPARTMENT : " + loadedJSONFile[key].name + " </mark></p>",
-                " <p><mark>CREATOR ROLE : " + loadedJSONFile[key].role + " </mark></p>",
+                " <p>TITLE : " + loadedJSONFile[key].title + " </p>",
+                " <p>CREATOR : " + loadedJSONFile[key].description + " </p>",
+                " <p>ACCEESSION NUMBER : " + loadedJSONFile[key].accession_number + " </p>",
+                " <p>TOMBSTONE : " + loadedJSONFile[key].tombstone + " </p>",
+                " <p>DEPARTMENT : " + loadedJSONFile[key].name + " </p>",
+                " <p>CREATOR ROLE : " + loadedJSONFile[key].role + " </p>",
             "</div>",
             "</div>",
           ].join("\n"));

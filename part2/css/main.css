@@ -98,9 +98,15 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-body {
+
+body
+{
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  color: #444444;
+  font-size: 14pt;
   background-color: #eeeeee;
 }
+
 
 main{
   /*margin: auto;*/
@@ -174,8 +180,8 @@ p {
 
 
 mark{
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 .art-description{
