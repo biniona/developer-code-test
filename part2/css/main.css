@@ -98,22 +98,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
-body
-{
-  font-family: 'Helvetica', 'Arial', sans-serif;
-  color: #444444;
-  font-size: 14pt;
-  background-color: #eeeeee;
-}
-
-
-main{
-  /*margin: auto;*/
-  text-align: center
-}
-
-
+/* All of Alek's custom styling is in art-view.css*/
 
 /* ==========================================================================
    Helper classes

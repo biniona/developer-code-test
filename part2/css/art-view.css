@@ -1,8 +1,18 @@
+body
+{
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  color: #444444;
+  font-size: 14pt;
+  background-color: #eeeeee;
+}
+main{
+  /*margin: auto;*/
+  text-align: center
+}
 p {
   padding: 0 0 5px 0;
   margin: 0;
 }
-
 /*An art view is a cell holding an art piece and information when not expanded*/
 @media (min-width: 600px) {
   .art-view {
@@ -28,12 +38,10 @@ p {
     overflow: hidden;
   }
 }
-
 .art-view:hover{
   animation-duration: .1s;
   background-color: #8f8f8f;
 }
-
 /*An art display is a cell holding an art piece and information when expanded*/
 .art-display{
   background-color: #d7d7d7;
@@ -45,15 +53,12 @@ p {
   margin: auto;
   overflow: hidden;
 }
-
 .art-image {
   float: left;
   width:  100px;
   height: 100px;
   overflow: hidden;
 }
-
-
 .art-image-display {
   width: auto;
   max-width: 100%;
@@ -61,22 +66,18 @@ p {
   max-height: 100%;
   margin : auto;
 }
-
-
 .art-description{
   text-align: left;
   width : 60%;
   display: inline-block;
   float: right;
 }
-
 .art-description-display{
   text-align: left;
   width : auto;
   height: auto;
   display: block;
 }
-
 /*this is a class that forces an art-image-display onto its own block*/
 .block-force{
   display: block;
