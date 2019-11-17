@@ -16,7 +16,7 @@ Using python, write a script that extracts the data from the tables and writes t
 
 ### Solution:
 
-My solution to part 2 can be found in the part2 directory. My solution uses JQuery to assist in generating the interface. Interface is generated in part2/js/displayDBinfo.js, and is styled in part2/css/art-view.css. The result can be seen at the following url https://biniona.github.io/developer-code-test/part2/index.html.  
+My solution to part 2 can be found in the part2 directory. My solution uses JQuery to assist in generating the interface. Interface is generated in part2/js/displayDBinfo.js, and is styled in part2/css/art-view.css. The result can be seen at the following url https://biniona.github.io/developer-code-test/part2/index.html. The solution works well on mobile as well so check it out on a phone if you are interested.
 
 ### Assignment:
 
