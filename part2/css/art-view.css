@@ -54,10 +54,14 @@ p {
   overflow: hidden;
 }
 .art-image {
-  float: left;
-  width:  100px;
-  height: 100px;
+  display: block;
+  width: auto;
+  max-width:  100%;
+  height: auto;
+  max-height: 100%;
   overflow: hidden;
+  margin: auto;
+  vertical-align: middle;
 }
 .art-image-display {
   width: auto;
@@ -83,4 +87,12 @@ p {
   display: block;
   text-align : center;
   padding : 0  0 1% 0;
+}
+
+.no-block{
+  float: left;
+  display : inline-block;
+  height: 100px;
+  width: 100px;
+  text-align : center;
 }
