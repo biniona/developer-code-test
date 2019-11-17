@@ -20,8 +20,8 @@ SQL_STR ='''
 # Function that makes SQL query and converts query to JSON String
 # PYTHON DB CODE BASED ON THIS STACK OVERFLOW POST:
 # https://stackoverflow.com/questions/3286525/return-sql-table-as-json-in-python
-def db_to_json(sql_str, json_str = True ):
-    conn = sqlite3.connect( DB )
+def db_to_json(sql_str, DB_name, json_str = True ):
+    conn = sqlite3.connect(DB_name)
     conn.row_factory = sqlite3.Row # This enables column access by name: row['column_name'] 
     db = conn.cursor()
     rows = db.execute(sql_str).fetchall()
@@ -38,5 +38,5 @@ def write_to_file(fileName, outPutString):
     outF.close()
 
 # calling the two functions
-write_to_file("table.JSON", db_to_json(SQL_STR))
+write_to_file("table.JSON", db_to_json(SQL_STR, DB))
 
