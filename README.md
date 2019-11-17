@@ -4,7 +4,7 @@
 
 ### Solution :
 
-The solution to part 1 can be found in the file part1.py. I part1.py is written for Python 3.6.3. The .JSON file produced table.JSON. 
+The solution to part 1 can be found in the file part1.py. I wrote part1.py in Python 3.6.3. The .JSON file produced is table.JSON. 
 
 ### Assignment:
 
