@@ -42,18 +42,20 @@ $(function(){
         $("main").append(
           [
             "<div class = 'art-view' id = '" + loadedJSONFile[key].accession_number + "'>",
-              "<img class = 'art-image' src = 'img/" +  loadedJSONFile[key].accession_number + "_reduced.jpg' alt = '" + loadedJSONFile[key].title + "' >",
-              "<div class = 'art-description'>",
-                " <p>TITLE : " + checkLength(loadedJSONFile[key].title) + " </p>",
-                " <p>CREATOR : " + checkLength(loadedJSONFile[key].description) + "</p>",
+              "<div class = 'blocking no-block'>",
+                "<img class = 'image art-image' src = 'img/" +  loadedJSONFile[key].accession_number + "_reduced.jpg' alt = '" + loadedJSONFile[key].title + "' >",
               "</div>",
-              "<div class = 'art-description-full'>",
-                " <p>TITLE : " + loadedJSONFile[key].title + " </p>",
-                " <p>CREATOR : " + loadedJSONFile[key].description + " </p>",
-                " <p>ACCEESSION NUMBER : " + loadedJSONFile[key].accession_number + " </p>",
-                " <p>TOMBSTONE : " + loadedJSONFile[key].tombstone + " </p>",
-                " <p>DEPARTMENT : " + loadedJSONFile[key].name + " </p>",
-                " <p>CREATOR ROLE : " + loadedJSONFile[key].role + " </p>",
+              "<div class = 'art-description'>",
+                " <p><i>Title</i> : " + checkLength(loadedJSONFile[key].title) + " </p>",
+                " <p><i>Creator</i> : " + checkLength(loadedJSONFile[key].description) + "</p>",
+              "</div>",
+              "<div class = 'art-description-display'>",
+                " <p><i>Title</i> : " + loadedJSONFile[key].title + " </p>",
+                " <p><i>Creator</i> : " + loadedJSONFile[key].description + " </p>",
+                " <p><i>Accession Number</i> : " + loadedJSONFile[key].accession_number + " </p>",
+                " <p><i>Tombstone</i> : " + loadedJSONFile[key].tombstone + " </p>",
+                " <p><i>Department</i> : " + loadedJSONFile[key].name + " </p>",
+                " <p><i>Creator Role</i> : " + loadedJSONFile[key].role + " </p>",
             "</div>",
             "</div>",
           ].join("\n"));
@@ -61,24 +63,24 @@ $(function(){
         var backSlashEscapeAccession = loadedJSONFile[key].accession_number.replace(/\./g,"\\.");
         //i make the art-description-full invisible so that it is on a different
         //cycle from art description
-        $("#"+backSlashEscapeAccession + " > .art-description-full").toggle();
+        $("#"+backSlashEscapeAccession + " > .art-description-display").toggle();
         //this is where the all the click functionality is stored
         $("#"+backSlashEscapeAccession).click(function() {
           //all the displaying is just JQuery toggle functions
           //I toggle visibility to display more or less information
           $("#"+backSlashEscapeAccession + " > .art-description").toggle();
-          $("#"+backSlashEscapeAccession + " > .art-description-full").toggle();
+          $("#"+backSlashEscapeAccession + " > .art-description-display").toggle();
           //I toggle between classes to achieve effects
+          $("#"+backSlashEscapeAccession).toggleClass("art-view")
           $("#"+backSlashEscapeAccession).toggleClass("art-display")
-          $("#"+backSlashEscapeAccession + " > .art-image").toggleClass("art-image-display")
-          $("#"+backSlashEscapeAccession + " > .art-description").toggleClass("art-description-display")
+          $("#"+backSlashEscapeAccession + " .blocking").toggleClass("block-force")
+          $("#"+backSlashEscapeAccession + " .blocking").toggleClass("no-block")
+          $("#"+backSlashEscapeAccession + " .image").toggleClass("art-image-display")
+          $("#"+backSlashEscapeAccession + " .image").toggleClass("art-image")
         });
         //this is to avoid displaying duplicate files. The way creator role
         //db was laid out often pieces were given more than 1 role.
         already_used.push(loadedJSONFile[key].accession_number);
-
       });
-
   });
-
 })
